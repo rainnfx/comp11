@@ -1,0 +1,31 @@
+BEGIN
+
+  PRINT "How many students do you have?"
+  READ num_students
+
+  highest_average = 0
+  top_student = ""
+
+  FOR i = 1 TO num_students DO
+      PRINT "Enter student's name:"
+      READ name
+
+      PRINT "Enter grade 1:"
+      READ grade1
+      PRINT "Enter grade 2:"
+      READ grade2
+      PRINT "Enter grade 3:"
+      READ grade3
+
+      average = (grade1 + grade2 + grade3) / 3
+
+      IF average > highest_average THEN
+          highest_average = average
+          top_student = name
+      ENDIF
+  END FOR
+
+  PRINT "Top student is:", top_student
+  PRINT "With an average grade of:", highest_average
+
+END
