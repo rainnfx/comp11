@@ -1,0 +1,29 @@
+BEGIN
+
+  PRINT "Enter numerator of first fraction:"
+  READ num1
+  PRINT "Enter denominator of first fraction:"
+  READ den1
+
+  PRINT "Enter numerator of second fraction:"
+  READ num2
+  PRINT "Enter denominator of second fraction:"
+  READ den2
+
+  IF den1 = den2 THEN
+      result_num = num1 + num2
+      result_den = den1
+  ELSE
+      common_den = den1 * den2
+      new_num1 = num1 * den2
+      new_num2 = num2 * den1
+      result_num = new_num1 + new_num2
+      result_den = common_den
+  ENDIF
+
+  PRINT "Resulting fraction is:"
+  PRINT result_num
+  PRINT "---"
+  PRINT result_den
+
+END
